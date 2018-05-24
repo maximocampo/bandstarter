@@ -16,6 +16,10 @@ const userSchema = new Schema({
   profilePic:String,
   influences:[String],
   instruments:[String],
+  requests:[{
+    type:Schema.Types.ObjectId,
+    ref:"Request"
+  }],
   snippets:[String],
   bands:[{
     type:Schema.Types.ObjectId,

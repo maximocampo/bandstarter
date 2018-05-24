@@ -1,8 +1,43 @@
 const express = require('express');
 const router  = express.Router();
 const Band    = require('../models/Band');
-const Project    = require('../models/Project');
+const Project = require('../models/Project');
 const User    = require('../models/User');
+const Request = require('../models/Request');
+const uploadCloud = require("../helpers/cloudinary");
+
+//New snippet
+router.post('/profile/snippet', uploadCloud.single('snippet'), (req, res, next)=>{
+  req.body.profilePic = req.file.url;
+  User.findByIdAndUpdate(req.user._id, req.body)
+    .then(()=>{
+      res.redirect('/profile');
+    })
+    .catch(e=>next(e));
+});
+
+//New profile pic
+router.post('/profile/pic', uploadCloud.single('profilePic'), (req, res, next)=>{
+  req.body.profilePic = req.file.url;
+  User.findByIdAndUpdate(req.user._id, req.body)
+    .then(()=>{
+      res.redirect('/profile');
+    })
+    .catch(e=>next(e));
+});
+
+//Sending requests
+router.post('/request/:id', (req, res, next) => {
+  Request.create({
+    from:req.body.user,
+    to:req.body.params,
+    snippet:req.body.snippet,
+    notes:req.body.notes
+  })
+    .then(request=>{
+      return User.findByIdAndUpdate(request.to,{$push:{requests:request}})
+    })
+});
 
 //New Band
 router.post('/band/new', (req, res, next) => {

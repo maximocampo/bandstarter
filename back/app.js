@@ -26,6 +26,13 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 
 const app = express();
 
+//CORS Setup
+const options = {
+  credentials:true,
+  origin:true
+}
+app.use(require('cors')(options));
+
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
