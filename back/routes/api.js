@@ -5,13 +5,15 @@ const Project = require('../models/Project');
 const User    = require('../models/User');
 const Request = require('../models/Request');
 const uploadCloud = require("../helpers/cloudinary");
+const upload = require('multer')({dest:'./public/test'});
 
 //New snippet
-router.post('/profile/snippet', uploadCloud.single('snippet'), (req, res, next)=>{
-  req.body.profilePic = req.file.url;
-  User.findByIdAndUpdate(req.user._id, req.body)
-    .then(()=>{
-      res.redirect('/profile');
+router.post('/profile/snippet', upload.single('snippet'), (req, res, next)=>{
+  res.send('ya');
+  //req.body.snippet = req.file.url;
+  User.findByIdAndUpdate(req.user._id, req.body, {new:true})
+    .then(user=>{
+      res.json(user);
     })
     .catch(e=>next(e));
 });
@@ -19,9 +21,9 @@ router.post('/profile/snippet', uploadCloud.single('snippet'), (req, res, next)=
 //New profile pic
 router.post('/profile/pic', uploadCloud.single('profilePic'), (req, res, next)=>{
   req.body.profilePic = req.file.url;
-  User.findByIdAndUpdate(req.user._id, req.body)
-    .then(()=>{
-      res.redirect('/profile');
+  User.findByIdAndUpdate(req.user._id, {$push:{snippet:req.body}}, {new:true})
+    .then(user=>{
+       res.json(user)
     })
     .catch(e=>next(e));
 });

@@ -63,7 +63,7 @@ class Signup extends Component {
               <input onChange={this.formChange} name="password" type="password"/>
             </li>
             <li>
-              <input className='submit' type="submit" onClick={this.submitForm}/>
+              <button className='submit' onClick={this.submitForm}>SIGN UP</button>
             </li>
 
           </ul>

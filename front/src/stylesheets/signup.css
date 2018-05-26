@@ -24,6 +24,14 @@ ul li input{
     height: 40px;
 }
 .submit{
-    width:300px;
-    height: 100px;
+    padding: 0;
+    height: 48px;
+    width: 100%;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #f62919;
+    border-style: none;
+    align-self: center;
+    cursor:pointer;
 }

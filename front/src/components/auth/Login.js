@@ -47,7 +47,7 @@ class Login extends Component {
     return (
       <div>
         <IndexNav/>
-        <div style={{display:'flex',justifyContent:'center'}}>
+        <div className='container-form' style={{display:'flex',justifyContent:'center'}}>
         <div style={styles.card}>
           <ul>
             <li>
@@ -59,7 +59,7 @@ class Login extends Component {
               <input onChange={this.formChange} name="password" type="password"/>
             </li>
             <li>
-              <input className='submit' type="submit" onClick={this.submitForm}/>
+              <button className='submit' onClick={this.submitForm}>LOG IN</button>
             </li>
 
           </ul>

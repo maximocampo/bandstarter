@@ -1,22 +1,23 @@
-nav{
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.cover-image{
+    width:100%;
+    position:absolute;
+    top:0px;
+    left:0px;
+    z-index: -1;
 }
-a{
-    margin: 4%;
+
+.header{
+    width:100%;
 }
-nav div{
-    width: 15%;
+.header h1{
+    padding-top: 30px;
+    color: white;
+    font-size: 6.5vw;
 }
-.logo{
-    flex-grow: 4;
-    font-size: 35px;
-    font-style: italic;
-    font-weight: bolder;
+.like-you{
+    padding: 6% 7% 0 7%;
 }
-.avatar-div{
-    display: flex;
-    justify-content: center;
+.like-you h1{
+    text-align: left;
+    font-size: 3vw;
 }

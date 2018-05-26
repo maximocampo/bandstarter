@@ -16,6 +16,7 @@ router.post('/login',
   });
 
 router.post('/signup', (req, res, next) => {
+  req.body.profilePic = 'https://www.w3schools.com/w3css/img_lights.jpg';
   User.register(req.body, req.body.password, (err, user)=>{
     if(err) return res.json(err);
     return res.json(user);
