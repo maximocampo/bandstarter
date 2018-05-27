@@ -3,8 +3,8 @@ import '../../stylesheets/profile.css'
 import { IndexNav } from '../IndexNav'
 import { UserInfo } from "./UserInfo";
 import { addTrack } from '../../services/firebase'
-
 import * as auth from "../../services/authService";
+import {uploadFile} from "../../services/authService";
 
 class ProfilePage extends Component {
   state = {
@@ -15,8 +15,15 @@ class ProfilePage extends Component {
     file: ''
   };
 
-  fileUpload = () => {
-    addTrack(this.state.file)
+  fileUpload = (whatfile) => {
+    const fileurl = new Object();
+    fileurl[whatfile] = 'https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/' + whatfile + '%2F' + this.state.file.name + '?alt=media&token=5ee0d32d-41e3-44c5-9131-d03fae9dcace';
+    uploadFile(fileurl,this.state.user._id,whatfile)
+      .then(user=>{
+        return this.setState({user})
+      })
+      .catch(e=>console.log(e));
+    addTrack(this.state.file,whatfile)
   };
 
   fileSelect = e => {
@@ -51,7 +58,7 @@ class ProfilePage extends Component {
       <div>
         <IndexNav logged={this.state.logged} openMenu={this.openMenu} menu={this.state.menu} logout={this.logout} profile={true}/>
         <div className='profile-container'>
-          <UserInfo edit={this.edit} user={user}/>
+          <UserInfo user={user}/>
           <div className='tabs'>
             <ul className='tab-container'>
               <li onClick={this.tabChange} className='tab tab-unselected' id='1'>
@@ -64,13 +71,20 @@ class ProfilePage extends Component {
               </li>
             </ul>
           <div className='tab-content'>
-          {this.state.tab === '1' &&<div>Item One</div>}
+          {this.state.tab === '1' &&
+            this.state.user.snippets.map((snippet)=>{
+              console.log(snippet)
+              return <div><audio controls><source src={snippet} type="audio/wav"/></audio></div>
+            })}
           {this.state.tab === '2' && <div>Item Two</div>}
           </div>
-            <input type="file" onChange={this.fileSelect}/>
-            <button style={{height:'100px',width:'100px'}} onClick={this.fileUpload}>submit</button>
           </div>
+
         </div>
+        <input type="file" onChange={this.fileSelect}/>
+        <button style={{height:'100px',width:'100px'}} onClick={()=>this.fileUpload('snippets')}>submit</button>
+        <input type="file" onChange={this.fileSelect}/>
+        <button style={{height:'100px',width:'100px'}} onClick={()=>this.fileUpload('profilePic')}>submit</button>
       </div>
     );
   };

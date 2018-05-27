@@ -10,6 +10,7 @@ const logger       = require('morgan');
 const path         = require('path');
 const session      = require("express-session");
 const passport     = require('./helpers/passport');
+const cors         = require('cors');
 
 
 mongoose.Promise = Promise;
@@ -30,8 +31,8 @@ const app = express();
 const options = {
   credentials:true,
   origin:true
-}
-app.use(require('cors')(options));
+};
+app.use(cors(options));
 
 // Middleware Setup
 app.use(logger('dev'));

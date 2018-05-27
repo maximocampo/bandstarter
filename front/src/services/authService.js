@@ -1,5 +1,24 @@
 const baseURL = 'http://localhost:3000/';
 
+export function uploadFile(file,id,whatfile){
+  console.log(file);
+  return fetch(baseURL + 'api/profile/'+ id + '/' + whatfile,{
+    method:'post',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(file)
+  })
+    .then(res=>{
+      if(!res.ok) return Promise.reject(res);
+      return res.json();
+    })
+    .then(user=>{
+      localStorage.setItem('user', JSON.stringify(user));
+      return user
+    });
+}
+
 export function logout(){
   return fetch(baseURL + 'logout')
     .then(res=>{
