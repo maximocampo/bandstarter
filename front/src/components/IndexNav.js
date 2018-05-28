@@ -18,12 +18,12 @@ const styles = {
   }
 };
 
-export const IndexNav = ({logged,openMenu,menu,logout,profile,color,landing}) => {
+export const IndexNav = ({logged,openMenu,menu,logout,profile,color,landing,inputChange}) => {
 
   return (
     <div>
       <nav className={landing ? '':'bottom-shadow'}>
-        <div><Link to="#" className='explore-a' style={{color:color}}>Explore</Link></div>
+          {logged ? <div><input type='text' onChange={inputChange}/></div> : <div><Link to="#" className='explore-a' style={{color:color}}>Explore</Link></div>}
         <Link to="/" className='logo' style={{color:color}}>bandstarter</Link>
         {logged ? <div onClick={openMenu}  className='avatar-div'><Avatar style={{cursor:'pointer'}} src='https://www.w3schools.com/w3css/img_lights.jpg'/></div> : <div><Link to="/login" className='login-a' style={{color:color}}>Log In</Link> <Link to="/signup" className='register-a' style={{color:color}}>Register</Link></div>}
         <Popover

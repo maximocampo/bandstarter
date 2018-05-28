@@ -3,7 +3,7 @@ const Schema   = mongoose.Schema;
 const PassportLocalMongoose = require("passport-local-mongoose");
 
 const userSchema = new Schema({
-  username: {
+  name:{
     type:String,
     required:true
   },
@@ -11,7 +11,6 @@ const userSchema = new Schema({
     type:String,
     required:true
   },
-  name: String,
   bio: String,
   profilePic:String,
   influences:[String],

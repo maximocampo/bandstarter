@@ -10,7 +10,8 @@ const requestSchema = new Schema({
     type:Schema.Types.ObjectId,
     ref:'User'
   },
-  snippet:String,
+  snippet1:String,
+  snippet2:String,
   notes:String
 },{
   timestamps: {

@@ -1,5 +1,35 @@
 const baseURL = 'http://localhost:3000/';
 
+export function sendRequest(id,body){
+  return fetch(baseURL + 'api/request/' + id,{
+    method:'post',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  })
+    .then(res=>res.json())
+    .then(user=>user);
+}
+
+export function searchQuery(query){
+  return fetch(baseURL + 'api/search/user/name',{
+    method:'post',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(query)
+  })
+    .then(res=>res.json())
+    .then(users=>users);
+}
+
+export function getUser(id){
+  return fetch(baseURL + 'api/profile/' + id)
+    .then(res=>res.json())
+    .then(user=>user);
+}
+
 export function uploadFile(file,id,whatfile){
   console.log(file);
   return fetch(baseURL + 'api/profile/'+ id + '/' + whatfile,{

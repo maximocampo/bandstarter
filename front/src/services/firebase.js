@@ -1,6 +1,4 @@
 import * as firebase from 'firebase'
-import { uploadSnippet } from "./authService";
-
 
 var config = {
   apiKey: "AIzaSyAs4-CA7_AVj9rWOu2mYM-K_V_XeRQPb6M",
@@ -11,8 +9,6 @@ var config = {
   messagingSenderId: "904715450266"
 };
 firebase.initializeApp(config);
-
-const db = firebase.database();
 
 const storageRef = firebase.storage().ref();
 const snippetsRef = storageRef.child('snippets');

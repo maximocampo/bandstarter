@@ -34,7 +34,7 @@ class Signup extends Component {
   formChange = e => {
     const newUser = this.state.newUser;
     newUser[e.target.name] = e.target.value;
-    this.setState({newUser})
+    this.setState({newUser});
   };
 
   componentWillMount(){
@@ -51,8 +51,8 @@ class Signup extends Component {
         <div style={styles.card}>
           <ul>
             <li>
-              <label htmlFor="username">USERNAME</label><br/>
-              <input onChange={this.formChange} name="username" type="text"/>
+              <label htmlFor="name">USERNAME</label><br/>
+              <input onChange={this.formChange} name="name" type="text"/>
             </li>
             <li>
               <label htmlFor="email">EMAIL</label><br/>

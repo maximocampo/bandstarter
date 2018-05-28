@@ -5,7 +5,7 @@ export const UserInfo = ({user}) => {
   return (
     <div className='info'>
       <Avatar src={user.profilePic} alt="Profile Picture" style={{width:'150px',height:'150px',borderStyle:'solid'}} />
-      <h1>{user.username}</h1>
+      <h1>{user.name}</h1>
       <div>
         <p>{user.bio}</p>
       </div>
