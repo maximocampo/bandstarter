@@ -20,9 +20,9 @@ const userSchema = new Schema({
     ref:"Request"
   }],
   snippets:[String],
-  bands:[{
+  replies:[{
     type:Schema.Types.ObjectId,
-    ref:"Band"
+    ref:"Reply"
   }]
 },{
   timestamps: {

@@ -1,9 +1,14 @@
 const express = require('express');
 const router  = express.Router();
-const Band    = require('../models/Band');
-const Project = require('../models/Project');
+const Reply    = require('../models/Reply');
 const User    = require('../models/User');
 const Request = require('../models/Request');
+
+router.get('/request/ignore/:id', (req,res,next)=>{
+  Request.findByIdAndRemove(req.params.id)
+    .then(request=>request)
+    .catch(e=>next(e))
+});
 
 router.get('/profile/:id', (req, res, next) => {
   User.findById(req.params.id)
@@ -13,15 +18,6 @@ router.get('/profile/:id', (req, res, next) => {
     .catch(e=>console.log(e))
 });
 
-
-//Search Bands
-router.post('/search/band', (req,res,next)=>{
-  Band.find({'name': {'$regex': new RegExp(req.body.query, "i")}})
-    .then(bands=>{
-      return res.json(bands)
-    })
-    .catch(e=>next(e))
-});
 //User search queries:
 //by instrument
 router.post('/search/user/instrument', (req,res,next)=>{
@@ -85,15 +81,13 @@ router.post('/request/:id', (req, res, next) => {
     .catch(e=>console.log(e))
 });
 
-
-
-
-//New Band
-router.post('/band/new', (req, res, next) => {
-  Band.create(req.body)
-    .then(band=>{
-      console.log(band)
+//New Reply
+router.post('/reply/new', (req, res, next) => {
+  Reply.create(req.body)
+    .then(reply=>{
+      return User.findByIdAndUpdate(reply.to,{$push:{replies:reply}})
     })
+    .catch(e=>console.log(e))
 });
 
 
@@ -105,5 +99,20 @@ router.post('/band/new', (req, res, next) => {
     })
 });
 
+//by id
+router.get('/user/:id', (req,res,next)=>{
+  User.findById(req.params.id)
+    .populate([{
+      "path":'requests',
+      "populate":{path:'from'}
+    },{
+      "path":"replies",
+      "populate":{path:'from'}
+    }])
+    .then(users=>{
+      return res.json(users)
+    })
+    .catch(e=>next(e))
+});
 
 module.exports = router;

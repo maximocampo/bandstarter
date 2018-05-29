@@ -4,7 +4,9 @@ import { IndexNav } from '../IndexNav'
 import { UserInfo } from "./UserInfo";
 import { addTrack } from '../../services/firebase'
 import * as auth from "../../services/authService";
-import {uploadFile} from "../../services/authService";
+import { uploadFile } from "../../services/authService";
+import Modal from '@material-ui/core/Modal';
+import Paper from '@material-ui/core/Paper';
 
 class ProfilePage extends Component {
   state = {
@@ -12,7 +14,40 @@ class ProfilePage extends Component {
     menu: false,
     logged: false,
     tab: '1',
-    file: ''
+    file: '',
+    newBandModal:false
+  };
+
+  sendContact = to => {
+    const body = {
+      from:JSON.parse(localStorage.getItem('user'))._id,
+      to,
+      info:document.getElementById('info').value
+    };
+    auth.sendReply(body)
+      .then(reply=>reply)
+      .catch(e=>console.log(e));
+    this.setState({newBandModal:false})
+  };
+
+  acceptRequest = id => {
+    this.setState({newBandModal:true})
+  };
+
+  ignoreRequest = id => {
+    auth.ignoreRequest(id)
+      .then(request=>request)
+      .catch(e=>console.log(e));
+    window.location.reload()
+  };
+
+  playRequest = i => {
+    console.log(i)
+    let trackContainer = document.getElementById(`tracks-container-${i}`);
+    let track1 = trackContainer.childNodes[0];
+    let track2 = trackContainer.childNodes[2];
+    track1.play();
+    track2.play()
   };
 
   fileUpload = (whatfile) => {
@@ -27,7 +62,6 @@ class ProfilePage extends Component {
   };
 
   fileSelect = e => {
-    console.log(e.target.files[0])
     this.setState({file:e.target.files[0]});
   };
 
@@ -49,14 +83,18 @@ class ProfilePage extends Component {
 
   componentWillMount() {
     if (!localStorage.getItem('user')) {
-      console.log('not logged')
+      return console.log('not logged')
     }
-    const user = JSON.parse(localStorage.getItem('user'));
-    this.setState({user,logged:true});
+    auth.findUser(JSON.parse(localStorage.getItem('user'))._id)
+      .then(user=>{
+        return this.setState({user,logged:true});
+      })
+      .catch(e=>console.log(e));
   }
 
   render() {
     const {user} = this.state;
+    console.log(this.state.user);
     return (
       <div>
         <IndexNav
@@ -70,35 +108,138 @@ class ProfilePage extends Component {
           <div className='tabs'>
             <ul className='tab-container'>
               <li onClick={this.tabChange} className='tab tab-unselected' id='1'>
-                Tracks
+                About
                 {this.state.tab === '1' && <hr style={{width:'100%'}}/>}
               </li>
               <li onClick={this.tabChange} className='tab tab-unselected' id='2'>
-                Friends
+                Tracks
                 {this.state.tab === '2' && <hr style={{width:'100%'}}/>}
+              </li>
+              <li onClick={this.tabChange} className='tab tab-unselected' id='3'>
+                Requests
+                {this.state.tab === '3' && <hr style={{width:'100%'}}/>}
+              </li>
+              <li onClick={this.tabChange} className='tab tab-unselected' id='4'>
+                Replies
+                {this.state.tab === '4' && <hr style={{width:'100%'}}/>}
               </li>
             </ul>
           <div className='tab-content'>
             {this.state.tab === '1' &&
+            <div>
               <div>
-            {user ?
-              this.state.user.snippets.map((snippet)=>{
-              return <div><audio controls><source src={snippet} type="audio/wav"/></audio></div>
-            })
-              :
-              <div><h1>You have no tracks</h1></div>
-              }
+                <input type="file" onChange={this.fileSelect}/>
+                <button style={{padding:'10px'}} onClick={()=>this.fileUpload('snippets')}>SUBMIT</button>
+                <input type="file" onChange={this.fileSelect}/>
+                <button onClick={()=>this.fileUpload('profilePic')}>SUBMIT</button>
               </div>
+            </div>
             }
-          {this.state.tab === '2' && <div>Item Two</div>}
-          </div>
-          </div>
+            {this.state.tab === '2' &&
+            <div>
+              {this.state.user.snippets ?
+                <div>
+                  {this.state.user.snippets.map(snippet=>{
+                  return (<div>
+                    <audio key={snippet._id} controls><source src={snippet}/></audio>
+                  </div>
+                  )
+                  })}
+                </div>
+                :
+                <div>No tracks</div>
+              }
+            </div>
+            }
+            {this.state.tab === '3' &&
+            <div>
+            {this.state.user.requests ?
+              <div style={{display:'flex',justifyContent:'center'}}>
+                {this.state.user.requests.map((request,i)=>{
+                  return (
+                    <div>
+                    <div className='request__container' style={{display:'flex',alignItems:'space-between'}}>
+                    <h1 className='request__h1'>From: {request.from.name}</h1>
+                    <div id={`tracks-container-${i}`}>
+                    <audio controls><source src={request.snippet1}/></audio>
+                      <br/>
+                    <audio controls><source src={request.snippet2}/></audio>
+                    </div>
+                    <div>
+                      <button className='request__button' onClick={()=>this.playRequest(i)}>PLAY</button>
+                    </div>
+                  </div>
+                    <div>
+                      <button className='request__button' onClick={()=>this.acceptRequest(request._id)}>ACCEPT</button>
+                      <button className='request__button' onClick={()=>this.ignoreRequest(request._id)}>IGNORE</button>
+                    </div>
+                      <Modal
+                        open={this.state.newBandModal}
+                        style={{position:'absolute',
+                          top:'0',
+                          left:'0',
+                          width:'100%',
+                          height:'100%',
+                          display:'flex',
+                          justifyContent:'center',
+                          alignItems:'center'}}
+                      >
+                        <Paper
+                          style={{padding:'20px'}}>
+                          <div>
+                            <h1 className='modal__h1'>SEND {request.from.name} A MESSAGE WITH YOU CONTACT INFORMATION SO YOU CAN JAM!</h1>
+                            <textarea type="text" id='info' className='modal__textarea'/>
+                          </div>
+                          <div className='modal__buttonsdiv'>
+                            <button
+                              className='modal__button--accept'
+                              onClick={()=>this.setState({newBandModal:false})}
+                            >
+                              CANCEL
+                            </button>
+                            <button
+                              className='modal__button--accept'
+                              onClick={()=>this.sendContact(request.from._id)}
+                            >
+                              SEND CONTACT INFO
+                            </button>
+                          </div>
 
+                        </Paper>
+                      </Modal>
+                  </div>
+                  )
+                })}
+              </div>
+              :
+              <div>No requests</div>
+            }
+          </div>
+            }
+            {this.state.tab === '4' &&
+            <div>
+              {this.state.user.replies ?
+                <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}>
+                  {this.state.user.replies.map((reply)=> {
+                    return (
+                      <div key={reply._id} className='reply__container'>
+                        <h1 className='reply__h1'>From:{reply.from.name}</h1>
+                        <p className='reply__p'>Message: {reply.info}</p>
+                      </div>
+                    )
+                  })}
+                </div>
+                :
+                <div>
+                  No Replies
+                </div>
+              }
+            </div>
+            }
+
+          </div>
+          </div>
         </div>
-        <input type="file" onChange={this.fileSelect}/>
-        <button style={{height:'100px',width:'100px'}} onClick={()=>this.fileUpload('snippets')}>submit</button>
-        <input type="file" onChange={this.fileSelect}/>
-        <button style={{height:'100px',width:'100px'}} onClick={()=>this.fileUpload('profilePic')}>submit</button>
       </div>
     );
   };

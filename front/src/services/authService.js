@@ -1,5 +1,30 @@
 const baseURL = 'http://localhost:3000/';
 
+export function sendReply(body){
+  return fetch(baseURL + 'api/reply/new',{
+    method:'post',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  })
+    .then(res=>res.json())
+    .then(reply=>reply);
+}
+
+export function ignoreRequest(id){
+  console.log(id)
+  return fetch(baseURL + 'api/request/ignore/' + id)
+    .then(res=>res.json())
+    .then(user=>user);
+}
+
+export function findUser(id){
+  return fetch(baseURL + 'api/user/' + id)
+    .then(res=>res.json())
+    .then(user=>user);
+}
+
 export function sendRequest(id,body){
   return fetch(baseURL + 'api/request/' + id,{
     method:'post',
@@ -66,7 +91,8 @@ export function signup(userData){
     headers:{
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(userData)
+    body: JSON.stringify(userData),
+    credentials : 'same-origin'
   })
     .then(res=>{
       if(!res.ok) return Promise.reject(res);
@@ -85,14 +111,14 @@ export function login(userData){
       "Content-Type": "application/json"
     },
     body: JSON.stringify(userData),
-    credentials: 'include'
+    credentials: 'same-origin'
   })
     .then(res=>{
       if(!res.ok) return Promise.reject(res);
       return res.json();
     })
     .then(user=>{
-      localStorage.setItem('user', JSON.stringify(user))
+      localStorage.setItem('user', JSON.stringify(user));
       return user;
     });
 }
