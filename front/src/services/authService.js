@@ -1,5 +1,17 @@
 const baseURL = 'http://localhost:3000/';
 
+export function editData(data,id){
+  return fetch(baseURL + 'api/profile/' + id + '/edit',{
+    method:'post',
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(data)
+  })
+    .then(res=>res.json())
+    .then(reply=>reply);
+}
+
 export function sendReply(body){
   return fetch(baseURL + 'api/reply/new',{
     method:'post',

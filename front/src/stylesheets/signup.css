@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
-
 ul{
     padding:0;
     width:100%;
@@ -16,20 +14,26 @@ ul li{
 }
 label{
     text-align: left;
-    font-size: 12px;
-    font-family:'Roboto Mono';
-    font-weight: 650px;
+    font-size: 32px;
+    font-family:'Helvetica Neue';
+    letter-spacing:-2px;
+    color: white;
+    font-weight: 800;
 }
 ul li input{
     height: 40px;
+    border: none;
+    margin-top: -15px
 }
 .submit{
+    font-family:'Helvetica Neue';
     padding: 0;
     height: 48px;
     width: 100%;
     color: white;
-    font-size: 12px;
-    font-weight: bold;
+    font-size: 20px;
+    letter-spacing:-1px;
+    font-weight: 800;
     background-color: #f62919;
     border-style: none;
     align-self: center;

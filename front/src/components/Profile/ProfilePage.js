@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../stylesheets/profile.css'
 import { IndexNav } from '../IndexNav'
-import { UserInfo } from "./UserInfo";
+import UserInfo from "./UserInfo";
 import { addTrack } from '../../services/firebase'
 import * as auth from "../../services/authService";
 import { uploadFile } from "../../services/authService";
@@ -18,6 +18,16 @@ class ProfilePage extends Component {
     newBandModal:false
   };
 
+  handleDelete = (data,key) => {
+    const user = this.state.user;
+    const filtered = {};
+    filtered[key] = user[key].filter(value => {
+      return value !== data
+    });
+   auth.editData(filtered,this.state.user._id)
+     .then(user=>this.setState({user}))
+     .catch(e=>console.log(e));
+  };
   sendContact = to => {
     const body = {
       from:JSON.parse(localStorage.getItem('user'))._id,
@@ -103,7 +113,10 @@ class ProfilePage extends Component {
           menu={this.state.menu}
           logout={this.logout}
           profile={true}/>
-        <UserInfo user={this.state.user}/>
+        <UserInfo
+          user={this.state.user}
+          handleDelete={this.handleDelete}
+        />
         <div style={{width:'100%',height:'300px',overflow:'hidden',margin:'0'}}>
           <img width='100%' src="https://i.ytimg.com/vi/tsjd7xdgfjA/maxresdefault.jpg" alt="Cover Image"/>
           <div className='header__name'>

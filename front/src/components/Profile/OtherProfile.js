@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../../stylesheets/profile.css'
 import { IndexNav } from '../IndexNav'
-import { UserInfo } from "./UserInfo";
+import UserInfo from "./UserInfo";
 import * as auth from "../../services/authService";
 import Modal from '@material-ui/core/Modal';
 import Paper from '@material-ui/core/Paper';

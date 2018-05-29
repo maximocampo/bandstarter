@@ -11,8 +11,8 @@ export const Routes = () => {
   return(
     <Switch>
       <Route path="/search" component={Search} />
-      <Route path="/profile/:id" component={OtherProfile} />
       <Route exact path="/profile" component={Profile} />
+      <Route path="/profile/:id" component={OtherProfile} />
       <Route path="/login" component={Login} />
       <Route path="/signup" component={Signup} />
       <Route path="/" component={Landing} />

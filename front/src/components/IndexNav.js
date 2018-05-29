@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Avatar from '@material-ui/core/Avatar';
 import Popover from '@material-ui/core/Popover';
 import '../stylesheets/navbar.css'
 
@@ -18,7 +17,6 @@ const styles = {
 };
 
 export const IndexNav = ({logged,openMenu,menu,logout,profile,color,landing,inputChange}) => {
-
   return (
     <div>
       <nav className={landing ? '':'bottom-shadow'}>
