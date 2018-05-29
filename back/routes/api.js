@@ -20,29 +20,30 @@ router.get('/profile/:id', (req, res, next) => {
 
 //User search queries:
 //by instrument
-router.post('/search/user/instrument', (req,res,next)=>{
-  User.find({'instruments': {'$regex': new RegExp(req.body.query, "i")}})
+router.get('/search/user/:instrument', (req,res,next)=>{
+  User.find({'instruments': {'$regex': new RegExp(req.params.instrument, "i")}})
     .then(users=>{
       return res.json(users)
     })
     .catch(e=>next(e))
 });
+
 //by influences
-router.post('/search/user/influences', (req,res,next)=>{
-  User.find({'influences': {'$regex': new RegExp(req.body.query, "i")}})
-    .then(users=>{
-      return res.json(users)
-    })
-    .catch(e=>next(e))
-});
-//by name
-router.post('/search/user/name', (req,res,next)=>{
-  User.find({'name': {'$regex': new RegExp(req.body.query, "i")}})
-    .then(users=>{
-      return res.json(users)
-    })
-    .catch(e=>next(e))
-});
+//router.post('/search/user/influences', (req,res,next)=>{
+//  User.find({'influences': {'$regex': new RegExp(req.body.query, "i")}})
+//    .then(users=>{
+//      return res.json(users)
+//    })
+//    .catch(e=>next(e))
+//});
+////by name
+//router.post('/search/user/name', (req,res,next)=>{
+//  User.find({'name': {'$regex': new RegExp(req.body.query, "i")}})
+//    .then(users=>{
+//      return res.json(users)
+//    })
+//    .catch(e=>next(e))
+//});
 
 //New snippet
 router.post('/profile/:id/snippets', (req, res, next)=>{

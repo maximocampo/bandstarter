@@ -38,13 +38,7 @@ export function sendRequest(id,body){
 }
 
 export function searchQuery(query){
-  return fetch(baseURL + 'api/search/user/name',{
-    method:'post',
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(query)
-  })
+  return fetch(baseURL + 'api/search/user/'+query)
     .then(res=>res.json())
     .then(users=>users);
 }

@@ -1,0 +1,14 @@
+.all-cards{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.card__container{
+    width:20%;
+    height:200px;
+    border:solid black 1px;
+    margin: 10px;
+}
+.nav__check{
+    width:100px
+}

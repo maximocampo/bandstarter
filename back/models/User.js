@@ -12,9 +12,13 @@ const userSchema = new Schema({
     required:true
   },
   bio: String,
+  location:String,
+  age:String,
+  gender:String,
   profilePic:String,
   influences:[String],
   instruments:[String],
+  genres:[String],
   requests:[{
     type:Schema.Types.ObjectId,
     ref:"Request"

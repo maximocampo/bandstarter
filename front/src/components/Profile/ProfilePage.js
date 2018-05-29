@@ -103,54 +103,29 @@ class ProfilePage extends Component {
           menu={this.state.menu}
           logout={this.logout}
           profile={true}/>
+        <UserInfo user={this.state.user}/>
+        <div style={{width:'100%',height:'300px',overflow:'hidden',margin:'0'}}>
+          <img width='100%' src="https://i.ytimg.com/vi/tsjd7xdgfjA/maxresdefault.jpg" alt="Cover Image"/>
+          <div className='header__name'>
+            <h1>{user.name}</h1>
+            <h3>{user.location}</h3>
+          </div>
+        </div>
         <div className='profile-container'>
-          <UserInfo user={this.state.user}/>
-          <div className='tabs'>
-            <ul className='tab-container'>
-              <li onClick={this.tabChange} className='tab tab-unselected' id='1'>
-                About
-                {this.state.tab === '1' && <hr style={{width:'100%'}}/>}
-              </li>
-              <li onClick={this.tabChange} className='tab tab-unselected' id='2'>
-                Tracks
-                {this.state.tab === '2' && <hr style={{width:'100%'}}/>}
-              </li>
-              <li onClick={this.tabChange} className='tab tab-unselected' id='3'>
-                Requests
-                {this.state.tab === '3' && <hr style={{width:'100%'}}/>}
-              </li>
-              <li onClick={this.tabChange} className='tab tab-unselected' id='4'>
-                Replies
-                {this.state.tab === '4' && <hr style={{width:'100%'}}/>}
-              </li>
-            </ul>
-          <div className='tab-content'>
-            {this.state.tab === '1' &&
-            <div>
-              <div>
-                <input type="file" onChange={this.fileSelect}/>
-                <button style={{padding:'10px'}} onClick={()=>this.fileUpload('snippets')}>SUBMIT</button>
-                <input type="file" onChange={this.fileSelect}/>
-                <button onClick={()=>this.fileUpload('profilePic')}>SUBMIT</button>
-              </div>
-            </div>
-            }
-            {this.state.tab === '2' &&
-            <div>
-              {this.state.user.snippets ?
-                <div>
-                  {this.state.user.snippets.map(snippet=>{
+          <div>
+            {this.state.user.snippets ?
+              <div className='track-card'>
+                {this.state.user.snippets.map(snippet=>{
                   return (<div>
-                    <audio key={snippet._id} controls><source src={snippet}/></audio>
-                  </div>
+                      <audio key={snippet._id} controls><source src={snippet}/></audio>
+                    </div>
                   )
-                  })}
-                </div>
-                :
-                <div>No tracks</div>
-              }
-            </div>
+                })}
+              </div>
+              :
+              <div>No tracks</div>
             }
+          </div>
             {this.state.tab === '3' &&
             <div>
             {this.state.user.requests ?
@@ -238,8 +213,6 @@ class ProfilePage extends Component {
             }
 
           </div>
-          </div>
-        </div>
       </div>
     );
   };
