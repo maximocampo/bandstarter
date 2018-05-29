@@ -51,11 +51,11 @@ class Landing extends Component {
              <img style={{width:'120%'}} src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
             </div>
             <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',position:'absolute',height:'100vh',top: '0',left:'0'}}>
-              <div style={{width:'50%',paddingTop:'190px'}}>
+              <div style={{width:'50%',paddingTop:'100px'}}>
                 <img style={{width:'100%'}} src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/logoblanco.png?alt=media&token=1b795e35-39b1-49f6-af30-40c2cc11b364"/>
                 <h1 style={{color:'white', fontSize:'24px', margin:'0'}}>FIND MUSICIANS. MAKE A BAND.</h1>
               </div>
-              <div style={{display:'flex',justifyContent:'center', width:'70%',paddingTop:'80px'}}>
+              <div style={{display:'flex',justifyContent:'space-around', width:'30%',paddingTop:'80px'}}>
                 <Link to='/login'><h3 style={{color:'white', fontWeight:'270',fontSize:'18px', margin:'0'}}>Log In</h3></Link>
                 <Link to='/signup'><h3 style={{color:'white', fontWeight:'270',fontSize:'18px', margin:'0'}}>Register</h3></Link>
               </div>

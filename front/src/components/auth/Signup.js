@@ -47,6 +47,7 @@ class Signup extends Component {
         <div style={{height:'100%',overflow:'hidden',position:'absolute',zIndex:'-1'}}>
           <img style={{width:'120%'}} src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
         </div>
+        <IndexNav/>
         <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100%'}}>
         <div style={styles.card}>
           <ul>

@@ -5,7 +5,7 @@ import {IndexNav} from '../IndexNav';
 
 const styles = {
   card: {
-    marginTop: '200px',
+    marginTop: '180px',
     width: '450px',
     height: '550px',
     boxShadow: 'none',
@@ -43,8 +43,8 @@ class Login extends Component {
 
   render() {
     return (
-      <IndexNav/>
       <div style={{height: '100vh',overflow: 'hidden'}}>
+        <IndexNav/>
         <div style={{height:'100%',overflow:'hidden',position:'absolute',zIndex:'-1'}}>
           <img style={{width:'120%'}} src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
         </div>

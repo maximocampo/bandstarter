@@ -1,19 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 nav{
-    height: 80px;
+    position: absolute;
+    width:100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
-a{
-    margin: 4%;
-}
-nav div{
-    width: 15%;
-}
 .logo{
-    font-family: "Roboto Mono",monospace;
-    font-size: 35px;
+    margin-top: 50px;
+    width:33%
 }
 .logo-profile{
     font-size: 35px;
