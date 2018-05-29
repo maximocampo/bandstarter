@@ -44,7 +44,9 @@ class Login extends Component {
   render() {
     return (
       <div style={{height: '100vh',overflow: 'hidden'}}>
-        <IndexNav/>
+        <IndexNav
+          place='auth'
+        />
         <div style={{height:'100%',overflow:'hidden',position:'absolute',zIndex:'-1'}}>
           <img style={{width:'120%'}} src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
         </div>

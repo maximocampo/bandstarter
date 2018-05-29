@@ -36,22 +36,19 @@ class Landing extends Component {
         {this.state.logged ?
           <div>
             <IndexNav
-              logged={true}
-              openMenu={this.openMenu}
-              menu={this.state.menu}
-              logout={this.logout}
-              color='black'/>
-            <div>
-              <img width='100%' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/Feedcopy%202.png?alt=media&token=f086f691-8e7b-4ae7-a60d-fa59e931aaf1" alt=""/>
+              place='home'
+            />
+            <div className='background__container'>
+              <img className='background__img' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
             </div>
           </div>
           :
           <div>
-            <div style={{height:'100%',overflow:'hidden',position:'absolute',zIndex:'-1'}}>
-             <img style={{width:'120%'}} src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
+            <div className='background__container'>
+             <img className='background__img' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
             </div>
-            <div style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center',position:'absolute',height:'100vh',top: '0',left:'0'}}>
-              <div style={{width:'50%',paddingTop:'100px'}}>
+            <div className='landingtext__container'>
+              <div style={{width:'50%',paddingTop:'5%'}}>
                 <img style={{width:'100%'}} src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/logoblanco.png?alt=media&token=1b795e35-39b1-49f6-af30-40c2cc11b364"/>
                 <h1 style={{color:'white', fontSize:'24px', margin:'0'}}>FIND MUSICIANS. MAKE A BAND.</h1>
               </div>

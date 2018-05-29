@@ -8,6 +8,8 @@ import { uploadFile } from "../../services/authService";
 import Modal from '@material-ui/core/Modal';
 import Paper from '@material-ui/core/Paper';
 
+
+
 class ProfilePage extends Component {
   state = {
     user:{},
@@ -16,6 +18,16 @@ class ProfilePage extends Component {
     tab: '1',
     file: '',
     newBandModal:false
+  };
+
+  handleAdd = (data,key) => {
+    const user = this.state.user;
+    const newKey = {};
+    newKey[key]=user[key];
+    newKey[key].push(data);
+    auth.editData(newKey,this.state.user._id)
+      .then(user=>this.setState({user}))
+      .catch(e=>console.log(e));
   };
 
   handleDelete = (data,key) => {
@@ -28,6 +40,7 @@ class ProfilePage extends Component {
      .then(user=>this.setState({user}))
      .catch(e=>console.log(e));
   };
+
   sendContact = to => {
     const body = {
       from:JSON.parse(localStorage.getItem('user'))._id,
@@ -108,17 +121,17 @@ class ProfilePage extends Component {
     return (
       <div>
         <IndexNav
-          logged={this.state.logged}
-          openMenu={this.openMenu}
-          menu={this.state.menu}
-          logout={this.logout}
-          profile={true}/>
+          place='profile'
+          />
+        <div className='background__container'>
+          <img className='background__img' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/bass.png?alt=media&token=ff89c22d-2e5c-45b2-96bf-d4b1acf59c4b"/>
+        </div>
         <UserInfo
           user={this.state.user}
+          handleAdd={this.handleAdd}
           handleDelete={this.handleDelete}
         />
-        <div style={{width:'100%',height:'300px',overflow:'hidden',margin:'0'}}>
-          <img width='100%' src="https://i.ytimg.com/vi/tsjd7xdgfjA/maxresdefault.jpg" alt="Cover Image"/>
+        <div style={{width:'100%',height:'80%',overflow:'hidden',margin:'0',backgroundColor:'rgba(255,255,255,0.6)'}}>
           <div className='header__name'>
             <h1>{user.name}</h1>
             <h3>{user.location}</h3>

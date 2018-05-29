@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { UserCard } from './search/UserCard'
 import * as auth from "../services/authService";
+import {IndexNav} from './IndexNav'
 import '../stylesheets/search.css'
 
 class Search extends Component {
@@ -18,28 +19,46 @@ class Search extends Component {
     displayUsers:[]
   };
 
+  updateDisplay = users => {
+    this.setState({displayUsers:users});
+  };
+
   instrumentQueryChange = e => {
-    auth.searchQuery({query:''})
-      .then(searchResults => {
-        return this.setState({searchResults});
-      })
-      .catch(e => console.log(e));
-    const target = e.target.name
+    const target = e.target.name;
     const instrumentQuery = this.state.instrumentQuery;
     instrumentQuery[target] = !this.state.instrumentQuery[target];
     this.setState({instrumentQuery});
-    var i;
-    for(i in this.state.instrumentQuery) {
-      if (this.state.instrumentQuery[i]) {
-        return auth.searchQuery(i)
-          .then(searchResults => {
-            this.setState({searchResults});
-            return this.setState({displayUsers:searchResults})
-          })
-          .catch(e => console.log(e));
+
+    let allFalse = true;
+    for (let i in instrumentQuery) {
+      if (instrumentQuery[i] === true) {
+        allFalse = false;
+        break;
       }
     }
-  };
+
+    if (allFalse) {
+      auth.searchQuery({query: ''})
+        .then(searchResults => {
+          this.setState({searchResults});
+          this.setState(searchResults);
+          return this.updateDisplay(this.state.searchResults)
+        })
+        .catch(e => console.log(e));
+    } else {
+      for (let i in this.state.instrumentQuery) {
+        if(this.state.instrumentQuery[i]){
+          return auth.searchQuery(i)
+            .then(searchResults => {
+              this.setState({searchResults});
+              return this.updateDisplay(this.state.searchResults)
+            })
+            .catch(e => console.log(e));
+        }
+        }
+      }
+    };
+
 
   inputChange = e => {
     const searchedUsers = this.state.searchResults.filter(user=>user.name.toLowerCase().includes(e.target.value));
@@ -56,34 +75,40 @@ class Search extends Component {
 
   render() {
     return (
-      <div>
-        <nav style={{display:'flex',justifyContent:'center'}}>
-          <section style={{display:'flex',justifyContent:'center'}}>
-            <div className='nav__check'>
-              <input type="checkbox" name='guitar' onChange={this.instrumentQueryChange}/>
-              <h4>Guitar</h4>
+      <div style={{height: '100vh',overflow: 'hidden'}}>
+        <div className='background__container'>
+          <img className='background__img' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/drums.png?alt=media&token=76f92e33-c286-41da-a431-0655904f1b7b"/>
+        </div>
+            <IndexNav
+              place='search'
+            />
+          <nav className='search__nav'>
+            <div>
+              <input type="text" onChange={this.inputChange}/>
             </div>
-            <div className='nav__check'>
-              <input type="checkbox" name='bass' onChange={this.instrumentQueryChange}/>
-              <h4>Bass</h4>
-            </div>
-            <div className='nav__check'>
-              <input type="checkbox" name='drums' onChange={this.instrumentQueryChange}/>
-              <h4>Drums</h4>
-            </div>
-            <div className='nav__check'>
-              <input type="checkbox" name='voice' onChange={this.instrumentQueryChange}/>
-              <h4>Voice</h4>
-            </div>
-            <div className='nav__check'>
-              <input type="checkbox" name='keys' onChange={this.instrumentQueryChange}/>
-              <h4>Keys</h4>
-            </div>
-          </section>
-          <section>
-            <input type="text" onChange={this.inputChange}/>
-          </section>
-        </nav>
+            <section style={{display:'flex',justifyContent:'center'}}>
+              <div className='nav__check'>
+                <input type="checkbox" name='guitar' onChange={this.instrumentQueryChange}/>
+                <h4>Guitar</h4>
+              </div>
+              <div className='nav__check'>
+                <input type="checkbox" name='bass' onChange={this.instrumentQueryChange}/>
+                <h4>Bass</h4>
+              </div>
+              <div className='nav__check'>
+                <input type="checkbox" name='drums' onChange={this.instrumentQueryChange}/>
+                <h4>Drums</h4>
+              </div>
+              <div className='nav__check'>
+                <input type="checkbox" name='voice' onChange={this.instrumentQueryChange}/>
+                <h4>Voice</h4>
+              </div>
+              <div className='nav__check'>
+                <input type="checkbox" name='keys' onChange={this.instrumentQueryChange}/>
+                <h4>Keys</h4>
+              </div>
+            </section>
+          </nav>
         <div>
           <div className='all-cards'>
             {this.state.displayUsers.map((result,i)=><UserCard key={i} user={result}/>)}

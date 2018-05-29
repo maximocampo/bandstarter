@@ -1,3 +1,19 @@
+.background__container{
+    height:100%;
+    overflow:hidden;
+    position:absolute;
+    z-index:-1;
+    top:0;
+    left:0
+}
+.background__img{
+    width:110%;
+}
+.search__nav{
+    align-items: center;
+    display:flex;
+    background-color: rgba(255,255,255,0.5);
+}
 .all-cards{
     display:flex;
     flex-wrap: wrap;
@@ -8,7 +24,8 @@
     height:200px;
     border:solid black 1px;
     margin: 10px;
+    background-color: rgba(255,255,255,0.5);
 }
 .nav__check{
-    width:100px
+    width:100px;
 }

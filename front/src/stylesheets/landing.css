@@ -1,11 +1,24 @@
-.cover-image{
-    width:100%;
+.background__container{
+    height:100%;
+    overflow:hidden;
     position:absolute;
-    top:0px;
-    left:0px;
-    z-index: -1;
+    z-index:-1;
+    top:0;
+    left:0;
 }
-
+.background__img{
+ width:120%;
+}
+.landingtext__container{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    height:100vh;
+    top: 0;
+    left:0;
+}
 .header{
     width:100%;
 }

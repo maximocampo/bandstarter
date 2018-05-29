@@ -1,15 +1,35 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 nav{
-    position: absolute;
     width:100%;
+}
+.auth__container{
+    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.logo{
+.auth__logo{
     margin-top: 50px;
     width:33%
 }
+.home__container{
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.home__logo{
+    width:100%;
+    align-self: left;
+    margin:10px;
+}
+.home__container h3{
+    color: white;
+    font-weight: 300;
+    font-size: 22px;
+    margin:50px 30px 30px 30px;
+}
+
 .logo-profile{
     font-size: 35px;
     font-style: italic;
