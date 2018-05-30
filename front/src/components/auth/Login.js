@@ -5,13 +5,11 @@ import {IndexNav} from '../IndexNav';
 
 const styles = {
   card: {
-    marginTop: '180px',
+    margin:'50px',
     width: '450px',
-    height: '550px',
     boxShadow: 'none',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center',
     padding: '20px 0 20px 0',
   }
 }
@@ -47,10 +45,10 @@ class Login extends Component {
         <IndexNav
           place='auth'
         />
-        <div style={{height:'100%',overflow:'hidden',position:'absolute',zIndex:'-1'}}>
-          <img style={{width:'120%'}} src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
+        <div className='background__container'>
+          <img className='background__img' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
         </div>
-        <div style={{display:'flex',justifyContent:'center',alignItems:'center',height:'100%'}}>
+        <div style={{display:'flex',justifyContent:'center',height:'100%'}}>
         <div style={styles.card}>
           <ul>
             <li>
@@ -62,9 +60,18 @@ class Login extends Component {
               <input onChange={this.formChange} name="password" type="password"/>
             </li>
             <li>
-              <button className='submit' onClick={this.submitForm}>LOG IN</button>
+              <div style={{display:'flex',flexDirection:'column'}}>
+                <button className='submit' onClick={this.submitForm}>LOG IN</button>
+                <div style={{display:'flex', justifyContent:'space-around', marginTop:'5px'}}>
+                  <div style={{width:'49%'}}>
+                    <img className='submit-facebook' style={{marginTop:'-15px'}} src='https://www.freeiconspng.com/uploads/facebook-sign-in-button-png-26.png'/>
+                  </div>
+                  <div style={{width:'49%'}}>
+                    <img className='submit-facebook' src='https://developers.google.com/accounts/images/sign-in-with-google.png'/>
+                  </div>
+                </div>
+              </div>
             </li>
-
           </ul>
         </div>
         </div>

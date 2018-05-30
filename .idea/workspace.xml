@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1322559-7eff-49e9-9f99-9984c239d34e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/back/bin/seed.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/bin/seed.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/IndexNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/IndexNav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Landing.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/Profile/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Profile/UserInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Search.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/auth/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/auth/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/auth/Signup.js" afterDir="false" />
@@ -16,7 +11,7 @@
       <change beforePath="$PROJECT_DIR$/front/src/stylesheets/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/stylesheets/navbar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/stylesheets/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/stylesheets/profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/stylesheets/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/stylesheets/search.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/front/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/stylesheets/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/stylesheets/signup.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Search.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Search.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front/src/components/Search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="80" column="14" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="80" selection-end-column="14" />
+            <state relative-caret-position="516">
+              <caret line="119" column="49" selection-start-line="119" selection-start-column="49" selection-end-line="119" selection-end-column="49" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -42,92 +37,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="seed.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/back/bin/seed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="User.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/back/models/User.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="30" column="1" selection-start-line="4" selection-start-column="30" selection-end-line="30" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfilePage.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="133" column="116" selection-start-line="133" selection-start-column="75" selection-end-line="133" selection-end-column="116" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInfo.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/components/Profile/UserInfo.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexNav.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/components/IndexNav.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="580">
-              <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="profile.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/stylesheets/profile.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1368">
-              <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/front/src/services/authService.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="171">
-              <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/back/routes/api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1349">
-              <caret line="71" column="23" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/src/stylesheets/search.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="656">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -192,19 +106,19 @@
         <option value="$PROJECT_DIR$/front/src/Routes.jsx" />
         <option value="$PROJECT_DIR$/front/src/App.js" />
         <option value="$PROJECT_DIR$/front/src/services/authService.js" />
+        <option value="$PROJECT_DIR$/back/bin/seed.js" />
+        <option value="$PROJECT_DIR$/front/src/components/Profile/UserInfo.js" />
+        <option value="$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js" />
+        <option value="$PROJECT_DIR$/front/src/components/Landing.js" />
+        <option value="$PROJECT_DIR$/front/src/stylesheets/landing.css" />
+        <option value="$PROJECT_DIR$/front/src/stylesheets/navbar.css" />
+        <option value="$PROJECT_DIR$/front/src/stylesheets/profile.css" />
         <option value="$PROJECT_DIR$/front/src/stylesheets/signup.css" />
         <option value="$PROJECT_DIR$/front/src/components/auth/Signup.js" />
         <option value="$PROJECT_DIR$/front/src/components/auth/Login.js" />
-        <option value="$PROJECT_DIR$/front/src/stylesheets/navbar.css" />
-        <option value="$PROJECT_DIR$/front/src/stylesheets/landing.css" />
-        <option value="$PROJECT_DIR$/front/src/components/Landing.js" />
+        <option value="$PROJECT_DIR$/front/src/components/IndexNav.js" />
         <option value="$PROJECT_DIR$/front/src/stylesheets/search.css" />
         <option value="$PROJECT_DIR$/front/src/components/Search.js" />
-        <option value="$PROJECT_DIR$/back/bin/seed.js" />
-        <option value="$PROJECT_DIR$/front/src/components/IndexNav.js" />
-        <option value="$PROJECT_DIR$/front/src/stylesheets/profile.css" />
-        <option value="$PROJECT_DIR$/front/src/components/Profile/UserInfo.js" />
-        <option value="$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js" />
       </list>
     </option>
   </component>
@@ -1013,18 +927,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527097973746</updated>
-      <workItem from="1527097978874" duration="130254000" />
+      <workItem from="1527097978874" duration="135117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130254000" />
+    <option name="totallyTimeSpent" value="135117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25694445" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.25694445" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -1033,7 +947,7 @@
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.0" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1042,6 +956,25 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="6" />
+      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.25694445" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="10" />
+      <window_info anchor="bottom" id="Debug" order="7" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Message" order="4" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="2" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32932693" />
+      <window_info anchor="bottom" id="Terminal" order="3" />
+      <window_info id="Favorites" order="0" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -1217,57 +1150,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/auth/Signup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="50" column="10" lean-forward="true" selection-start-line="50" selection-start-column="10" selection-end-line="50" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/signup.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="563">
-          <caret line="34" column="21" selection-start-line="34" selection-start-column="21" selection-end-line="34" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/auth/Login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="47" column="22" selection-start-line="47" selection-start-column="22" selection-end-line="47" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/landing.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/Landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="40" column="51" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/navbar.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="4" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/components/search/UserCard.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -1303,40 +1185,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/IndexNav.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="56" column="12" selection-start-line="56" selection-start-column="12" selection-end-line="56" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/Search.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="80" column="14" lean-forward="true" selection-start-line="78" selection-start-column="8" selection-end-line="80" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/search.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/profile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1368">
-          <caret line="72" column="31" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/components/Profile/UserInfo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
@@ -1347,12 +1195,97 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/landing.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="10" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/Landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="43" column="18" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="43" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/auth/Signup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="68" column="16" selection-start-line="68" selection-start-column="16" selection-end-line="75" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/navbar.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/IndexNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="471">
+          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/signup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="133" column="116" selection-start-line="133" selection-start-column="75" selection-end-line="133" selection-end-column="116" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/auth/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/search.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/Search.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="516">
+          <caret line="119" column="49" selection-start-line="119" selection-start-column="49" selection-end-line="119" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>

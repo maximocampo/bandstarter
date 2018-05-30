@@ -4,7 +4,6 @@ ul{
     display: flex;
     flex-direction:column;
     margin: 20px;
-    height: 100%;
     list-style: none;
 }
 ul li{
@@ -37,5 +36,9 @@ ul li input{
     background-color: #f62919;
     border-style: none;
     align-self: center;
+    cursor:pointer;
+}
+.submit-facebook{
+    width:100%;
     cursor:pointer;
 }

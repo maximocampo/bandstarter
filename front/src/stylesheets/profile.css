@@ -4,10 +4,10 @@
     position:absolute;
     z-index:-1;
     top:0;
-    left:0
+    left:0;
 }
 .background__img{
-    width:110%;
+    width:120%;
 }
 
 .tab-container{

@@ -3,9 +3,12 @@ import { UserCard } from './search/UserCard'
 import * as auth from "../services/authService";
 import {IndexNav} from './IndexNav'
 import '../stylesheets/search.css'
+import Modal from '@material-ui/core/Modal';
 
 class Search extends Component {
   state = {
+    modal:false,
+    selectedValue:'',
     logged:false,
     instrumentQuery:{
       guitar:false,
@@ -17,6 +20,10 @@ class Search extends Component {
     query:'',
     searchResults:[],
     displayUsers:[]
+  };
+
+  openModal = () => {
+    this.setState({modal:!this.state.modal})
   };
 
   updateDisplay = users => {
@@ -75,40 +82,46 @@ class Search extends Component {
 
   render() {
     return (
-      <div style={{height: '100vh',overflow: 'hidden'}}>
+      <div>
         <div className='background__container'>
           <img className='background__img' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/drums.png?alt=media&token=76f92e33-c286-41da-a431-0655904f1b7b"/>
         </div>
             <IndexNav
               place='search'
             />
-          <nav className='search__nav'>
-            <div>
-              <input type="text" onChange={this.inputChange}/>
+        <nav className='search__nav'>
+          <section style={{display:'flex',width:'100%',justifyContent:'center'}}>
+            <div className='nav__check'>
+              <input type="checkbox" name='guitar' onChange={this.instrumentQueryChange}/>
+              <h4>Guitar</h4>
             </div>
-            <section style={{display:'flex',justifyContent:'center'}}>
-              <div className='nav__check'>
-                <input type="checkbox" name='guitar' onChange={this.instrumentQueryChange}/>
-                <h4>Guitar</h4>
-              </div>
-              <div className='nav__check'>
-                <input type="checkbox" name='bass' onChange={this.instrumentQueryChange}/>
-                <h4>Bass</h4>
-              </div>
-              <div className='nav__check'>
-                <input type="checkbox" name='drums' onChange={this.instrumentQueryChange}/>
-                <h4>Drums</h4>
-              </div>
-              <div className='nav__check'>
-                <input type="checkbox" name='voice' onChange={this.instrumentQueryChange}/>
-                <h4>Voice</h4>
-              </div>
-              <div className='nav__check'>
-                <input type="checkbox" name='keys' onChange={this.instrumentQueryChange}/>
-                <h4>Keys</h4>
-              </div>
-            </section>
-          </nav>
+            <div className='nav__check'>
+              <input type="checkbox" name='bass' onChange={this.instrumentQueryChange}/>
+              <h4>Bass</h4>
+            </div>
+            <div className='nav__check'>
+              <input type="checkbox" name='drums' onChange={this.instrumentQueryChange}/>
+              <h4>Drums</h4>
+            </div>
+            <div className='nav__check'>
+              <input type="checkbox" name='voice' onChange={this.instrumentQueryChange}/>
+              <h4>Voice</h4>
+            </div>
+            <div className='nav__check'>
+              <input type="checkbox" name='keys' onChange={this.instrumentQueryChange}/>
+              <h4>Keys</h4>
+            </div>
+          </section>
+            <button onClick={this.openModal}>FILTER</button>
+            <Modal
+              open={this.state.modal}
+              onClose={this.openModal}
+            >
+                <div style={{position:'absolute',top:'400px'}}>
+                  <h1>hola</h1>
+                </div>
+            </Modal>
+        </nav>
         <div>
           <div className='all-cards'>
             {this.state.displayUsers.map((result,i)=><UserCard key={i} user={result}/>)}

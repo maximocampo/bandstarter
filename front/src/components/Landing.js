@@ -37,6 +37,7 @@ class Landing extends Component {
           <div>
             <IndexNav
               place='home'
+              logout={this.logout}
             />
             <div className='background__container'>
               <img className='background__img' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>

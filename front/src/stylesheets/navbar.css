@@ -3,7 +3,7 @@ nav{
     width:100%;
 }
 .auth__container{
-    margin-top: 50px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,7 +21,6 @@ nav{
 .home__logo{
     width:100%;
     align-self: left;
-    margin:10px;
 }
 .home__container h3{
     color: white;

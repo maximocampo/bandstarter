@@ -4,7 +4,7 @@ import Popover from '@material-ui/core/Popover';
 import '../stylesheets/navbar.css'
 
 
-export const IndexNav = ({place}) => {
+export const IndexNav = ({place,logout}) => {
   return (
     <nav>
       {place === 'auth' &&
@@ -17,11 +17,14 @@ export const IndexNav = ({place}) => {
       {place === 'home' &&
         <div className='home__container'>
             <div style={{width:'50%',display:'flex',alignItems:'center'}}>
-              <Link to='/' style={{width:'40%'}}>
+              <Link to='/' style={{width:'40%',margin:'10px 20px 10px 10px'}}>
                 <img className='home__logo' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/logoblanco.png?alt=media&token=1b795e35-39b1-49f6-af30-40c2cc11b364"/>
               </Link>
               <Link to='/profile'>
                 <h3>Profile</h3>
+              </Link>
+              <Link to='/' onClick={logout}>
+                <h3>Logout</h3>
               </Link>
             </div>
             <Link to='/search'>
@@ -32,11 +35,14 @@ export const IndexNav = ({place}) => {
       {place === 'search' &&
       <div className='home__container'>
         <div style={{width:'50%',display:'flex',alignItems:'center'}}>
-          <Link to='/' style={{width:'40%'}}>
+          <Link to='/' style={{width:'40%',margin:'10px 20px 10px 10px'}}>
             <img className='home__logo' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/logoblanco.png?alt=media&token=1b795e35-39b1-49f6-af30-40c2cc11b364"/>
           </Link>
           <Link to='/profile'>
             <h3>Profile</h3>
+          </Link>
+          <Link to='/' onClick={logout}>
+            <h3>Logout</h3>
           </Link>
         </div>
       </div>
@@ -44,11 +50,14 @@ export const IndexNav = ({place}) => {
       {place === 'profile' &&
       <div className='home__container'>
         <div style={{width:'50%',display:'flex',alignItems:'center'}}>
-          <Link to='/' style={{width:'40%'}}>
+          <Link to='/' style={{width:'40%',margin:'10px 20px 10px 10px'}}>
             <img className='home__logo' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/logoblanco.png?alt=media&token=1b795e35-39b1-49f6-af30-40c2cc11b364"/>
           </Link>
           <Link to='/profile'>
             <h3>Profile</h3>
+          </Link>
+          <Link to='/logout' onClick={logout}>
+            <h3>Logout</h3>
           </Link>
         </div>
         <Link to='/search'>
