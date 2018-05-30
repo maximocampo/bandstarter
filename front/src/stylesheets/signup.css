@@ -39,6 +39,7 @@ ul li input{
     cursor:pointer;
 }
 .submit-facebook{
+    padding-top: 20px;
     width:100%;
     cursor:pointer;
 }

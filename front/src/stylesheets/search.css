@@ -13,7 +13,6 @@
     align-items: center;
     display:flex;
     flex-direction: column;
-    background-color: rgba(255,255,255,0.5);
 }
 h4{
     margin:0;
@@ -21,23 +20,87 @@ h4{
 .all-cards{
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: left;
+    width:95%
 }
 .card__container{
-    width:20%;
-    height:200px;
-    border:solid black 1px;
-    margin: 10px;
-    background-color: rgba(255,255,255,0.5);
+    width:200px;
+    height:330px;
+    margin: 1%;
+    background-color: rgba(255, 255, 255, 0.6);
+    transition: .2s;
+}
+.card__container:hover{
+    width:200px;
+    height:330px;
+    margin: 1%;
+    background-color: rgba(240, 239, 255, 0.7);
+    transition: .2s;
+}
+
+.filter__modal{
+    position: absolute;
+    margin: auto;
+    top:150px;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.83);
+    width:50%;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.filter__form{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.form__h3{
+    font-size:34px;
+    letter-spacing:-2px;
+    margin-bottom:0
 }
 .nav__check{
-    width:100px;
+    width:90px;
+    margin:0 30px 0 30px;
 }
-.filters__container{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width:100vw;
-    height:100vh
+
+.nav__check input[type="checkbox"] {
+    display: none;
+    width:20px;
+    height:20px
+}
+.nav__check input[type="checkbox"] + label {
+    background: url('https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/off.png?alt=media&token=71033e71-c305-48bb-9de8-31efb727c307') no-repeat;
+    height: 100%;
+    width: 100%;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    z-index: 1;
+}
+.nav__check input[type="checkbox"]:checked + label {
+    background: url('https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/on.png?alt=media&token=ea00d1f1-8e41-49e7-b65c-3efb18ddd20c') no-repeat;
+    height: 100%;
+    width: 100%;
+    display:inline-block;
+    padding: 0 0 0 0px;
+    z-index: 1;
+}
+.chip{
+    display:flex;
+    align-items:center;
+    margin:6px;
+    padding:9px 12px 9px 12px;
+    background-color: rgb(224, 224, 224);
+    border-radius:15px
+}
+.chip:hover{
+    display:flex;
+    align-items:center;
+    margin:6px;
+    padding:9px 12px 9px 12px;
+    background-color: rgb(206, 206, 206);
+    border-radius:15px
 }

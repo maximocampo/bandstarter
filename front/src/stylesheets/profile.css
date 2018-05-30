@@ -20,7 +20,13 @@
     cursor: pointer;
     margin: 10px;
     display: inline;
+    width:100px;
+    text-align: left;
+    color:white;
+    font-family: 'Helvetica Neue';
+    font-weight: 300;
 }
+
 .tab hr{
     margin-top: 7px;
     height: 2px;
@@ -29,12 +35,12 @@
 }
 .profile-container{
     display: flex;
-    flex-direction: row;
-    margin-left: 30%;
+    flex-direction: column;
+    margin-left: 24%;
 }
 .info{
     z-index: 2;
-    width: 20%;
+    width: 15%;
     position: absolute;
     top: 150px;
     left: 70px;
@@ -42,6 +48,7 @@
     flex-direction: column;
     box-shadow: 0px 0px 30px 6px rgba(0,0,0,0.3);
     background-color: white;
+    margin-bottom: 20px;
 }
 
 .info h1{
@@ -79,6 +86,7 @@ button{
 }
 
 .profile__button--request{
+    margin: 20px;
     width:150px;
 }
 .modal__button{
@@ -90,14 +98,15 @@ button{
     padding:10px;
 }
 .request__container{
-    width:90%;
-    height:100px
+    width:100%;
 }
 .request__h1{
+    margin: 20px;
     text-align: left;
     font-size: 16px;
-    font-family:'Roboto Mono';
+    font-family:'Helvetica Neue';
     font-weight: 650px;
+    color: white;
 }
 .request__button{
     margin: 10px;
@@ -120,19 +129,25 @@ button{
     font-weight: 450px;
 }
 .header__name{
-    position: absolute;
-    top:270px;
-    left: 28%
+
 }
 .header__name h1{
+    text-align: left;
+    color:white;
+    font-family: 'Helvetica Neue';
+    font-weight: 300;
+}
+.header__name h3{
+    text-align: left;
     color:white;
     font-family: 'Helvetica Neue';
     font-weight: 300;
 }
 .track-card{
+    width:80%;
     margin: 20px;
     padding: 20px;
     height: 70px;
-    box-shadow: 0px 0px 30px 6px rgba(0,0,0,0.3);
-
+    display: flex;
+    align-items: center;
 }

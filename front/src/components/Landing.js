@@ -32,7 +32,7 @@ class Landing extends Component {
 
   render() {
     return (
-      <div style={{height: '100vh',overflow: 'hidden'}}>
+      <div>
         {this.state.logged ?
           <div>
             <IndexNav
@@ -41,6 +41,9 @@ class Landing extends Component {
             />
             <div className='background__container'>
               <img className='background__img' src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/landing-fondo1.png?alt=media&token=3faceaaf-058f-4723-95fb-a20458119a5b"/>
+            </div>
+            <div>
+              <img src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/Feedcopy%202.png?alt=media&token=3357c49e-3c6f-4186-b113-c850111a5e5f" alt=""/>
             </div>
           </div>
           :
@@ -68,28 +71,3 @@ class Landing extends Component {
 };
 
 export default Landing;
-//        <img src="https://firebasestorage.googleapis.com/v0/b/bandstarter-e4143.appspot.com/o/Feedcopy.png?alt=media&token=09b57b4a-70f5-4f18-8d0b-4ecaf598f603" width='100%'/>
-//{this.state.logged ?
-//  <IndexNav
-//    logged={this.state.logged}
-//    openMenu={this.openMenu}
-//    menu={this.state.menu}
-//    logout={this.logout}
-//    color='black'/>
-//  :
-//  <IndexNav
-//    logged={this.state.logged}
-//    openMenu={this.openMenu}
-//    menu={this.state.menu}
-//    logout={this.logout}
-//    color='white'
-//    landing={true}/>
-//}
-//{!this.state.logged &&
-//<div>
-//  <img className='cover-image' src="http://res.cloudinary.com/maximo/image/upload/v1527286515/image8.jpg" alt="google maps image"/>
-//  <div className='header'>
-//    <h1>FIND MUSICIANS.<br/> MAKE A BAND.</h1>
-//  </div>
-//</div>
-//}

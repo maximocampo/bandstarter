@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1322559-7eff-49e9-9f99-9984c239d34e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/back/bin/seed.js" beforeDir="false" afterPath="$PROJECT_DIR$/back/bin/seed.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/front/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/IndexNav.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/IndexNav.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Landing.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/Profile/OtherProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Profile/OtherProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/Profile/UserInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Profile/UserInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/auth/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/auth/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/auth/Signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/auth/Signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/stylesheets/landing.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/stylesheets/landing.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/stylesheets/navbar.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/stylesheets/navbar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/src/components/search/UserCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/components/search/UserCard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/stylesheets/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/stylesheets/profile.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/stylesheets/search.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/stylesheets/search.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/front/src/stylesheets/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/front/src/stylesheets/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/front/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/front/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +32,8 @@
       <file leaf-file-name="Search.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/front/src/components/Search.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="119" column="49" selection-start-line="119" selection-start-column="49" selection-end-line="119" selection-end-column="49" />
+            <state relative-caret-position="285">
+              <caret line="91" column="42" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -40,8 +44,8 @@
       <file leaf-file-name="search.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/front/src/stylesheets/search.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+            <state relative-caret-position="472">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -99,25 +103,25 @@
         <option value="$PROJECT_DIR$/back/helpers/passport.js" />
         <option value="$PROJECT_DIR$/back/models/Band.js" />
         <option value="$PROJECT_DIR$/back/models/Reply.js" />
-        <option value="$PROJECT_DIR$/front/src/components/search/UserCard.js" />
         <option value="$PROJECT_DIR$/back/routes/api.js" />
         <option value="$PROJECT_DIR$/back/models/User.js" />
-        <option value="$PROJECT_DIR$/front/src/components/Profile/OtherProfile.js" />
         <option value="$PROJECT_DIR$/front/src/Routes.jsx" />
         <option value="$PROJECT_DIR$/front/src/App.js" />
         <option value="$PROJECT_DIR$/front/src/services/authService.js" />
-        <option value="$PROJECT_DIR$/back/bin/seed.js" />
-        <option value="$PROJECT_DIR$/front/src/components/Profile/UserInfo.js" />
-        <option value="$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js" />
-        <option value="$PROJECT_DIR$/front/src/components/Landing.js" />
         <option value="$PROJECT_DIR$/front/src/stylesheets/landing.css" />
         <option value="$PROJECT_DIR$/front/src/stylesheets/navbar.css" />
-        <option value="$PROJECT_DIR$/front/src/stylesheets/profile.css" />
-        <option value="$PROJECT_DIR$/front/src/stylesheets/signup.css" />
         <option value="$PROJECT_DIR$/front/src/components/auth/Signup.js" />
-        <option value="$PROJECT_DIR$/front/src/components/auth/Login.js" />
-        <option value="$PROJECT_DIR$/front/src/components/IndexNav.js" />
+        <option value="$PROJECT_DIR$/back/bin/seed.js" />
+        <option value="$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js" />
+        <option value="$PROJECT_DIR$/front/src/components/Profile/OtherProfile.js" />
+        <option value="$PROJECT_DIR$/front/src/components/Profile/UserInfo.js" />
+        <option value="$PROJECT_DIR$/front/src/components/search/UserCard.js" />
         <option value="$PROJECT_DIR$/front/src/stylesheets/search.css" />
+        <option value="$PROJECT_DIR$/front/src/components/IndexNav.js" />
+        <option value="$PROJECT_DIR$/front/src/components/Landing.js" />
+        <option value="$PROJECT_DIR$/front/src/components/auth/Login.js" />
+        <option value="$PROJECT_DIR$/front/src/stylesheets/signup.css" />
+        <option value="$PROJECT_DIR$/front/src/stylesheets/profile.css" />
         <option value="$PROJECT_DIR$/front/src/components/Search.js" />
       </list>
     </option>
@@ -927,12 +931,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1527097973746</updated>
-      <workItem from="1527097978874" duration="135117000" />
+      <workItem from="1527097978874" duration="154242000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135117000" />
+    <option name="totallyTimeSpent" value="154242000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -947,7 +951,7 @@
       <window_info anchor="bottom" id="Version Control" order="2" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="3" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.32932693" />
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -966,7 +970,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="bottom" id="Debug" order="7" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.32932693" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -1099,13 +1103,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/models/Reply.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -1115,13 +1112,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/front/public/Feedcopy.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/Profile/OtherProfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/src/Routes.jsx">
       <provider selected="true" editor-type-id="text-editor">
@@ -1150,13 +1140,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/search/UserCard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/back/routes/api.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1349">
@@ -1171,51 +1154,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/back/bin/seed.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="32" column="50" selection-start-line="32" selection-start-column="50" selection-end-line="32" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/back/models/User.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="30" column="1" selection-start-line="4" selection-start-column="30" selection-end-line="30" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/Profile/UserInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/profile.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/front/src/stylesheets/landing.css">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/Landing.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="43" column="18" lean-forward="true" selection-start-line="41" selection-start-column="12" selection-end-line="43" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1236,54 +1178,129 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/IndexNav.js">
+    <entry file="file://$PROJECT_DIR$/back/bin/seed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="471">
-          <caret line="58" column="27" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="542">
+          <caret line="150" column="3" lean-forward="true" selection-start-line="150" selection-start-column="3" selection-end-line="150" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/signup.css">
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/sectional.rnc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="263">
+          <caret line="46" column="16" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js">
+    <entry file="file://$PROJECT_DIR$/back/models/User.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="133" column="116" selection-start-line="133" selection-start-column="75" selection-end-line="133" selection-end-column="116" />
+        <state relative-caret-position="570">
+          <caret line="30" column="1" selection-start-line="4" selection-start-column="30" selection-end-line="30" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/back/models/Reply.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/Profile/OtherProfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="105" column="11" lean-forward="true" selection-start-line="105" selection-start-column="11" selection-end-line="105" selection-end-column="11" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/front/src/components/auth/Login.js">
+    <entry file="file://$PROJECT_DIR$/front/src/components/search/UserCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="71" column="22" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+        <state relative-caret-position="285">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/src/stylesheets/search.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+        <state relative-caret-position="472">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/Profile/ProfilePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="96" column="2" selection-start-line="96" selection-start-column="2" selection-end-line="102" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/IndexNav.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="25" column="30" selection-start-line="25" selection-start-column="30" selection-end-line="25" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/auth/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="66" column="45" selection-start-line="66" selection-start-column="45" selection-end-line="66" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/signup.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/Profile/UserInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/stylesheets/profile.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/front/src/components/Landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="809">
+          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/front/src/components/Search.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="119" column="49" selection-start-line="119" selection-start-column="49" selection-end-line="119" selection-end-column="49" />
+        <state relative-caret-position="285">
+          <caret line="91" column="42" selection-start-line="91" selection-start-column="42" selection-end-line="91" selection-end-column="42" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

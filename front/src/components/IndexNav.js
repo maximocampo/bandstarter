@@ -23,9 +23,9 @@ export const IndexNav = ({place,logout}) => {
               <Link to='/profile'>
                 <h3>Profile</h3>
               </Link>
-              <Link to='/' onClick={logout}>
+              <a href='/logout' onClick={logout}>
                 <h3>Logout</h3>
-              </Link>
+              </a>
             </div>
             <Link to='/search'>
               <h3>Find your bandmate</h3>
@@ -41,9 +41,9 @@ export const IndexNav = ({place,logout}) => {
           <Link to='/profile'>
             <h3>Profile</h3>
           </Link>
-          <Link to='/' onClick={logout}>
+          <a href='/logut' onClick={logout}>
             <h3>Logout</h3>
-          </Link>
+          </a>
         </div>
       </div>
       }
@@ -56,9 +56,9 @@ export const IndexNav = ({place,logout}) => {
           <Link to='/profile'>
             <h3>Profile</h3>
           </Link>
-          <Link to='/logout' onClick={logout}>
+          <a href='/logout' onClick={logout}>
             <h3>Logout</h3>
-          </Link>
+          </a>
         </div>
         <Link to='/search'>
           <h3>Find your bandmate</h3>
